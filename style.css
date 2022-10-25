@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+   
+}
+.wrapper {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    background: #48bcff;
+    position: relative;
+    animation: ani-one 4s ease-in-out 1.5s forwards 1 ,
+               ani-two 4s ease-in-out 10s forwards 1 ;
+}
+.round {
+    background: #ffff00;
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    display: block;
+    left: 45%;
+    border-radius: 50%;
+    animation: ani-three 8s ease-in-out forwards 1 ,
+                ani-four 8s ease-in-out 8s forwards 1 ;
+}
+.heading {
+    text-align: center;
+   padding-top: 20%;
+   letter-spacing: 1.5px;
+   font-size: 5rem;
+   color: aliceblue;
+   position: relative;
+   transform: translateY(-50%);
+}
+.heading span {
+    display: inline-block;
+    animation: animate 3s linear infinite;
+}
+@keyframes animate {
+    0% {
+        opacity: 0;
+        transform: rotateY(90deg);
+        filter: blur(3px);
+    }
+    100% {
+        opacity: 1;
+        transform: rotateY(0deg);
+        filter: blur(0);
+    }
+}
+.wrapper2 {
+    position: absolute;
+    bottom: 0;
+} 
+.img-area img {
+    width: 25%;
+    float: left;
+}
+@keyframes ani-one {
+    75%{
+        background: #d2c13a;
+    }
+    100%{
+        background: #040427;
+    }
+}
+@keyframes ani-two {
+    0%{
+        background: #040427;
+    }
+    70%{
+        background: #d2c13a;
+    }
+    100%{
+        background: #48bcff;
+    }
+}
+@keyframes ani-three {
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 70%;
+    }
+}
+@keyframes ani-four {
+    0%{
+        top: 70%;
+    }
+    100%{
+        top: 0;
+    }
+}
